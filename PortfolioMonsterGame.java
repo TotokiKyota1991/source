@@ -1,8 +1,7 @@
-package muranii;
 
 import java.io.IOException;
 
-public class Tekito033ver5_totoki {
+public class PortfolioMonsterGame {
 	public static int pHp = 300;
 	public static int pMp = 250;
 	public static int yakusou = 2;
@@ -16,16 +15,16 @@ public class Tekito033ver5_totoki {
 		int dice;
 		int command;
 
-		System.out.println("//// Tekito033 〜勇者ムラニーのぼうけん〜////\n");
+		System.out.println("//// Tekito033 〜勇者トトキーのぼうけん〜////\n");
 		timeLag500();
 		System.out.println(" ----------------------------------------------------------------");
 		System.out.println("| ダンジョンをすすみボスをたおそう！！                           |");
-		System.out.println("| ムラニーのHPが0になったらゲームオーバー！！                    |");
+		System.out.println("| トトキーのHPが0になったらゲームオーバー！！                    |");
 		System.out.println(" ----------------------------------------------------------------");
 		timeLag1000();
 		while(true) {
 			sugoroku(square);
-			System.out.println("ムラニー/HP:" + pHp + "/MP:" + pMp);
+			System.out.println("トトキー/HP:" + pHp + "/MP:" + pMp);
 			timeLag500();
 			while(true) {
 				System.out.print("\n(１)すすむ(２)どうぐ -->");
@@ -45,7 +44,7 @@ public class Tekito033ver5_totoki {
 				bossLines();
 				bossBattle(args);
 				if(mapBoss) {
-					System.out.println("\n《ムラニーはボスをたおした！！》\n《ゲームクリア！！》");
+					System.out.println("\n《トトキーはボスをたおした！！》\n《ゲームクリア！！》");
 					timeLag1000();
 				}
 				break;
@@ -76,8 +75,8 @@ public class Tekito033ver5_totoki {
 		int monsterKill = 0;
 		int monsterIncidence;
 		String[] monsterName = {
-				"スライム", "メタルキングスライム", "がいこつナイト", "のらいぬ", "みやこおちのもとホスト",
-				"はんぐれ", "ぼうりょくだん"
+				"スライム", "メタルキングスライム", "がいこつナイト", "のらいぬ", "チワワライオン",
+				"かまいたち", "がんせきおに"
 				};
 		String[] monsterNumber  =new String[monsterKazu];
 		int[] monsterHp = new int[monsterKazu];
@@ -193,7 +192,7 @@ public class Tekito033ver5_totoki {
 				}
 			}
 			System.out.println("-------------------------------------\n");
-			System.out.println("ムラニー/HP:" + pHp + "/MP:" + pMp + "/ぼうぎょ:" + playerDp + "/ちから:きぶんしだい");
+			System.out.println("トトキー/HP:" + pHp + "/MP:" + pMp + "/ぼうぎょ:" + playerDp + "/ちから:きぶんしだい");
 			while(true) {
 				System.out.println("《コマンドをせんたく》");
 				System.out.println("(１)こうげき(２)まほう");
@@ -422,7 +421,7 @@ public class Tekito033ver5_totoki {
 					}
 				}
 //プレイヤーの防御ブロック
-				System.out.println("■ムラニーはまもるをつかった");
+				System.out.println("■トトキーはまもるをつかった");
 				playerDp = (int)(Math.random() * 9) + 1;
 				System.out.println("《ぼうぎょが" + (playerDp - 1) + "あがった》");
 			}
@@ -434,7 +433,7 @@ public class Tekito033ver5_totoki {
 					}
 				}
 //プレイヤーの逃走ブロック
-				System.out.println("■ムラニーはにげだした");
+				System.out.println("■トトキーはにげだした");
 				escapeLuck = (int)(Math.random() * 2);
 				stratT = System.currentTimeMillis();
 				while(true) {
@@ -464,7 +463,7 @@ public class Tekito033ver5_totoki {
 						System.out.println((monsterPw[i] - playerDp) + "のダメージ");
 						pHp -= monsterPw[i] - playerDp;
 					}else {
-						System.out.println("ムラニーはガードした");
+						System.out.println("トトキーはガードした");
 					}
 					stratT = System.currentTimeMillis();
 					while(true) {
@@ -477,7 +476,7 @@ public class Tekito033ver5_totoki {
 					kisekimethod();
 				}
 				if(pHp <= 0) {
-					System.out.println("\nゆうしゃムラニーはしんでしまった");
+					System.out.println("\nゆうしゃトトキーはしんでしまった");
 					stratT = System.currentTimeMillis();
 					while(true) {
 						if((System.currentTimeMillis() - stratT) >= 500){
@@ -579,7 +578,7 @@ public class Tekito033ver5_totoki {
 		timeLag1000();
 		System.out.println(" くびなしジェネラル");
 		System.out.println(" ----------------------------------------------------------------");
-		System.out.println("| ゆうしゃムラニー                                               |");
+		System.out.println("| ゆうしゃトトキー                                               |");
 		System.out.println("| わたしをたおしてみよ！！！                                     |");
 		System.out.println(" ----------------------------------------------------------------");
 		timeLag1000();
@@ -667,7 +666,7 @@ public class Tekito033ver5_totoki {
 						}
 					}
 					System.out.println("-------------------------------------\n");
-					System.out.println("ムラニー/HP:" + pHp + "/MP:" + pMp + "/ぼうぎょ:" + playerDp + "/ちから:きぶんしだい");
+					System.out.println("トトキー/HP:" + pHp + "/MP:" + pMp + "/ぼうぎょ:" + playerDp + "/ちから:きぶんしだい");
 					while(true) {
 						System.out.println("《コマンドをせんたく》");
 						System.out.println("(１)こうげき(２)まほう");
@@ -893,7 +892,7 @@ public class Tekito033ver5_totoki {
 							}
 						}
 		//プレイヤーの防御ブロック
-						System.out.println("■ムラニーはだいぼうぎょをつかった");
+						System.out.println("■トトキーはだいぼうぎょをつかった");
 						playerDp = (int)(Math.random() * 11) + 30;
 						System.out.println("《ぼうぎょが" + (playerDp - 1) + "あがった》");
 					}
@@ -912,7 +911,7 @@ public class Tekito033ver5_totoki {
 								System.out.println((monsterPw[i] - playerDp) + "のダメージ");
 								pHp -= monsterPw[i] - playerDp;
 							}else {
-								System.out.println("ムラニーはガードした");
+								System.out.println("トトキーはガードした");
 							}
 							stratT = System.currentTimeMillis();
 							while(true) {
@@ -925,7 +924,7 @@ public class Tekito033ver5_totoki {
 							kisekimethod();
 						}
 						if(pHp <= 0) {
-							System.out.println("\nゆうしゃムラニーはしんでしまった");
+							System.out.println("\nゆうしゃトトキーはしんでしまった");
 							stratT = System.currentTimeMillis();
 							while(true) {
 								if((System.currentTimeMillis() - stratT) >= 500){
@@ -961,7 +960,7 @@ public class Tekito033ver5_totoki {
 		int command;
 		while(true) {
 			System.out.println("《どうぐ》");
-			System.out.println("ムラニー/HP:" + pHp + "/MP:" + pMp);
+			System.out.println("トトキー/HP:" + pHp + "/MP:" + pMp);
 			timeLag500();
 			System.out.println("（０）もどる");
 			System.out.println("（１）やくそう : " + yakusou + " こ");
@@ -1048,17 +1047,17 @@ public class Tekito033ver5_totoki {
 	public static void kisekimethod() {
 		kisekiKakera--;
 		pHp = 300;
-		System.out.println("\nゆうしゃムラニーはしんでしまった");
+		System.out.println("\nゆうしゃトトキーはしんでしまった");
 		timeLag1000();
 		timeLag1000();
 		System.out.println("////　きせきのひかりがさしこむ　////");
 		timeLag1000();
 		timeLag1000();
-		System.out.println("《 ゆうしゃムラニーはふっかつした！！ 》");
+		System.out.println("《 ゆうしゃトトキーはふっかつした！！ 》");
 		timeLag1000();
 		timeLag1000();
 	}
 	public static void name() {
-		
+
 	}
 }
